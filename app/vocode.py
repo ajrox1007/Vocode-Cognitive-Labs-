@@ -129,15 +129,16 @@ def extract_code(response_text):
     return "\n".join(code_lines)
 
 def start_voice_assistant(icon, item):
-    directory_to_watch = "/Users/arjunsethi/Documents"
+    directory_to_watch = "~/Documents/"
     
     command = listen_command()
+
     if command:
         process_command(command, directory_to_watch)
 
 def setup_tray_icon():
     
-    icon_image_path = "/Users/arjunsethi/Documents/vocode.png" 
+    icon_image_path = "./assets/vocode.png" 
     icon_image = Image.open(icon_image_path)
     
     
@@ -148,11 +149,10 @@ def setup_tray_icon():
         MenuItem('Activate Voice Assistant', start_voice_assistant),
         MenuItem('Quit', lambda icon, item: icon.stop())
     )
-    
-    
+
+
     icon.menu = menu
-    
-    
+
     icon.run()
 
 if __name__ == "__main__":

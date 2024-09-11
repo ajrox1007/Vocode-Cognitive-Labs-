@@ -1,0 +1,15 @@
+name: vocode
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - conda-forge::fastapi
+  - conda-forge::openai
+  - conda-forge::speechrecognition
+  - conda-forge::gtts
+  - conda-forge::pillow
+  - conda-forge::playsound
+  - pip
+  - pip:
+      - FastAPI
+      - pystray
